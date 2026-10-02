@@ -6,6 +6,14 @@
 'BayesCorrelated.induces_iff_positive_support' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
 'BayesCorrelated.onePlayer_obedienceGain' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
 'BayesCorrelated.onePlayer_characterization' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'BayesCorrelated.information_order_characterization' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'BayesCorrelated.individuallySufficient_outcome' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'BayesCorrelated.moreIncentiveConstrained_outcome_any_universe' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'BayesCorrelated.onePlayer_individual_sufficiency' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'BayesCorrelated.onePlayer_information_order' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
 'BayesCorrelated.IsProbability' depends on axioms: [propext, Classical.choice, Quot.sound]
 'BayesCorrelated.IsInformation' depends on axioms: [propext, Classical.choice, Quot.sound]
 'BayesCorrelated.IsDecisionRule' depends on axioms: [propext, Classical.choice, Quot.sound]
@@ -18,3 +26,11 @@
 'BayesCorrelated.bestResponseGain' depends on axioms: [propext, Classical.choice, Quot.sound]
 'BayesCorrelated.MixedBNE' depends on axioms: [propext, Classical.choice, Quot.sound]
 'BayesCorrelated.Implementable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BayesCorrelated.IsCombination' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BayesCorrelated.HasIndividualChannels' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BayesCorrelated.IndividuallySufficient' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BayesCorrelated.FullSupportPrior' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BayesCorrelated.outcome' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BayesCorrelated.IsBCEOutcome' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BayesCorrelated.MoreIncentiveConstrained' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BayesCorrelated.IsGarbling' depends on axioms: [propext, Classical.choice, Quot.sound]

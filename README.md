@@ -1,8 +1,8 @@
-# Bayes Correlated Equilibrium and Information Expansions
+# Bayes Correlated Equilibrium, Information Expansions and Information Order
 
-A Lean 4 formalization of the finite information-expansion characterization in
+A Lean 4 formalization of the finite information-expansion and information-order characterizations in
 Bergemann and Morris, *Bayes correlated equilibrium and the comparison of
-information structures in games* (Theoretical Economics 11, 2016), Theorem 1.
+information structures in games* (Theoretical Economics 11, 2016), Theorems 1 and 2.
 
 Authors and responsible maintainers: **Arthur Freitas Ramos**, **David Barros Hulak**,
 and **Ruy Jose Guerra Barretto de Queiroz**.
@@ -70,10 +70,62 @@ recommendation to choose the opposite state, and proves a two-player coordinatio
 rule has two diagonal outcomes of probability one half and no off-diagonal mass.
 The binary example includes an original signal with probability zero.
 
-Theorem 2, the all-games information-order/individual-sufficiency characterization,
-is not formalized here. It needs separate statistical definitions, an outcome-order
-argument across all finite games, and a substantial converse. Theorem 1 does not
-establish it. Infinite state, action, signal or player spaces, correlated private
+## Information order: Theorem 2
+
+`BayesCorrelated.information_order_characterization` proves, for valid finite
+information kernels `π` and `ρ` on a **nonempty state space**,
+`IndividuallySufficient π ρ ↔ MoreIncentiveConstrained π ρ`.
+The direction is precise: a structure individually sufficient for another has a
+subset of the other's BCE outcomes in every finite basic game.
+
+| Lean binder or definition | Mathematical meaning |
+| --- | --- |
+| `IsCombination π ρ q` | a nonnegative joint signal kernel with **both** statewise marginals `π` and `ρ` |
+| `HasIndividualChannels π q φ` | normalized channels `φ i s`, with `∑ e, (if e i = z then q θ t e else 0) = π θ t * φ i (t i) z` |
+| `IndividuallySufficient π ρ` | existence of that coupling and those channels; cross-player channel correlation is allowed |
+| `outcome π σ θ a` | the state-conditioned action kernel `∑ t, π θ t * σ θ t a` |
+| `IsBCEOutcome ψ π u ν` | existence of a normalized obedient decision rule producing `ν` |
+| `FullSupportPrior ψ` | a normalized common prior with `ψ θ > 0` in every state |
+| `MoreIncentiveConstrained π ρ` | outcome inclusion for every finite heterogeneous action family, arbitrary real utilities and full-support prior |
+
+The game quantifier's action universe contains the player, state and both signal
+universes. `moreIncentiveConstrained_outcome_any_universe` proves that it applies to
+action types in **any** Lean universe by finite-cardinality encoding and action
+equivalences. There is no cardinality bound, selected-game restriction, product
+garbling assumption, or positivity assumption on signal masses. Empty action
+profiles cannot support normalized decision rules; their inclusion cases are
+vacuous. Nonempty states are explicit because otherwise no normalized prior exists
+and the all-game condition would be vacuous.
+
+The forward proof transports a BCE through the common coupling and averages its
+obedience gains with the individual channel weights. Null target fibers receive a
+normalized point mass whose weighted joint contribution is zero.
+
+The converse constructs genuine finite quadratic-scoring games. Player `i`'s
+actions are `T i ⊕ (T i × (Θ × T₋ᵢ) × Bool)`: original reports and two signed
+coordinate perturbations of each original belief. Report vectors are arbitrary
+real vectors labeling finite actions. The weighted proper-scoring identity proves
+truthful obedience even at null types, where total division gives the zero vector.
+All-game inclusion supplies a transferred BCE; its exact truthful outcome yields
+an actual coupling with both marginals. The signed deviations bound every
+weighted independence residual by the positive perturbation size.
+
+The coupling polytope is a closed subset of a finite compact cube. Directed closed
+residual bounds give an exact zero-residual coupling. All limit equations are
+weighted polynomial equations, defined at zero signal masses. Normalized channels
+are recovered on positive type masses; null original rows vanish, allowing a
+normalized fallback. State probabilities are cancelled only under the explicit
+full-support assumption. Theorem 1's allowance of zero prior states does not alter
+Theorem 2's all-basic-game prior assumption.
+
+`BCE/OnePlayerOrder.lean` proves that individual sufficiency is exactly stochastic
+garbling and derives its all-decision-game characterization. `BCE/OrderExamples.lean`
+proves that revelation garbles to a null experiment with an impossible signal,
+rejects the reverse order, and constructs correlated two-player channels that
+satisfy individual sufficiency while their joint kernel differs from the product
+of their marginals.
+
+Infinite state, action, signal or player spaces, correlated private
 randomization beyond the signal kernel, and welfare/persuasion optimization results
 are outside this project's claim.
 
@@ -90,10 +142,10 @@ lake env lean Audit.lean
 ```
 
 `Challenge.lean` is a standalone statement contract importing only pinned Mathlib.
-It has twelve genuine model definitions and eight exact theorem statements with
+It has twenty genuine model definitions and thirteen exact theorem statements with
 explicit reference proof placeholders. `Solution.lean` imports the complete
-library and proves the same public statements using a separate `Implementation`
-namespace. No proof placeholders occur in the library or Solution. Recreate the
+library and proves the same public statements using separate `Implementation` and
+`OrderImplementation` namespaces. No proof placeholders occur in the library or Solution. Recreate the
 contract with `python3 scripts/make_challenge.py`.
 
 For full local verification, provide a checkout of the pinned official pipeline:
@@ -121,7 +173,9 @@ registration. This repository is not a registered Palomar result.
 ## Source and credit
 
 Primary source: [Bergemann–Morris paper](https://economics.mit.edu/sites/default/files/publications/paper_79_bce.pdf),
-Section 2, Definitions 1–5 and Theorem 1, pages 493–496.
+Section 2, Definitions 1–5 and Theorem 1, pages 493–496; Definition 6, Definition 7
+and Theorem 2, pages 497 and 502–506. The second proof uses the paper's quadratic
+scoring argument with a finite signed-coordinate test set and weighted compactness.
 This is a source-based formalization and the complete proof development is in this
 repository. Bounded GitHub Lean code searches for `BayesCorrelated`, `Bergemann`, and
 `"Bayes correlated"` returned no matches on 2026-10-02; the official registry queries `Bayes correlated` and `Bergemann` also returned

@@ -55,6 +55,44 @@
         ((∀ (s : S) (x y : C), 0 ≤ ∑ θ, ψ θ * π θ s * σ θ s x * (u x θ - u y θ)) ↔
           BayesCorrelated.Implementable ψ (fun θ t => π θ (t ())) (fun x a θ => u (a ()) θ) fun θ t a =>
             σ θ (t ()) (a ()))
+@BayesCorrelated.information_order_characterization : ∀ {I : Type u_1} {Θ : Type u_2} {T : I → Type u_3}
+  {E : I → Type u_4} [inst : Fintype I] [inst_1 : DecidableEq I] [inst_2 : Fintype Θ] [Nonempty Θ]
+  [inst_4 : (i : I) → Fintype (T i)] [inst_5 : (i : I) → DecidableEq (T i)] [inst_6 : (i : I) → Fintype (E i)]
+  [inst_7 : (i : I) → DecidableEq (E i)] (π : Θ → ((i : I) → T i) → ℝ) (ρ : Θ → ((i : I) → E i) → ℝ),
+  BayesCorrelated.IsInformation π →
+    BayesCorrelated.IsInformation ρ →
+      (BayesCorrelated.IndividuallySufficient π ρ ↔ BayesCorrelated.MoreIncentiveConstrained π ρ)
+@BayesCorrelated.individuallySufficient_outcome : ∀ {I : Type u_1} {Θ : Type u_2} {A : I → Type u_3} {T : I → Type u_4}
+  {E : I → Type u_5} [inst : Fintype I] [inst_1 : DecidableEq I] [inst_2 : Fintype Θ] [inst_3 : (i : I) → Fintype (A i)]
+  [inst_4 : (i : I) → DecidableEq (A i)] [inst_5 : (i : I) → Fintype (T i)] [inst_6 : (i : I) → DecidableEq (T i)]
+  [inst_7 : (i : I) → Fintype (E i)] [inst_8 : (i : I) → DecidableEq (E i)] [Nonempty Θ] (ψ : Θ → ℝ)
+  (π : Θ → ((i : I) → T i) → ℝ) (ρ : Θ → ((i : I) → E i) → ℝ),
+  BayesCorrelated.IsInformation π →
+    BayesCorrelated.IsInformation ρ →
+      BayesCorrelated.IndividuallySufficient π ρ →
+        ∀ (u : I → ((i : I) → A i) → Θ → ℝ) (ν : Θ → ((i : I) → A i) → ℝ),
+          BayesCorrelated.IsBCEOutcome ψ π u ν → BayesCorrelated.IsBCEOutcome ψ ρ u ν
+@BayesCorrelated.moreIncentiveConstrained_outcome_any_universe : ∀ {I : Type u_1} {Θ : Type u_2} {T : I → Type u_3}
+  {A : I → Type u_4} [inst : Fintype I] [inst_1 : DecidableEq I] [inst_2 : Fintype Θ] [inst_3 : (i : I) → Fintype (T i)]
+  [inst_4 : (i : I) → DecidableEq (T i)] [inst_5 : (i : I) → Fintype (A i)] [inst_6 : (i : I) → DecidableEq (A i)]
+  {E : I → Type u_5} [inst_7 : (i : I) → Fintype (E i)] [inst_8 : (i : I) → DecidableEq (E i)] (ψ : Θ → ℝ)
+  (π : Θ → ((i : I) → T i) → ℝ) (ρ : Θ → ((i : I) → E i) → ℝ),
+  BayesCorrelated.MoreIncentiveConstrained π ρ →
+    BayesCorrelated.FullSupportPrior ψ →
+      ∀ (u : I → ((i : I) → A i) → Θ → ℝ) (ν : Θ → ((i : I) → A i) → ℝ),
+        BayesCorrelated.IsBCEOutcome ψ π u ν → BayesCorrelated.IsBCEOutcome ψ ρ u ν
+@BayesCorrelated.onePlayer_individual_sufficiency : ∀ {Θ : Type u_1} {S : Type u_2} {Z : Type u_3} [Fintype Θ]
+  [inst : Fintype S] [DecidableEq S] [inst_2 : Fintype Z] [inst_3 : DecidableEq Z] (π : Θ → S → ℝ) (ρ : Θ → Z → ℝ),
+  (∀ (θ : Θ), BayesCorrelated.IsProbability (π θ)) →
+    ((BayesCorrelated.IndividuallySufficient (fun θ t => π θ (t ())) fun θ e => ρ θ (e ())) ↔
+      BayesCorrelated.IsGarbling π ρ)
+@BayesCorrelated.onePlayer_information_order : ∀ {Θ : Type u_1} {S : Type u_2} {Z : Type u_3} [inst : Fintype Θ]
+  [inst_1 : Fintype S] [inst_2 : DecidableEq S] [inst_3 : Fintype Z] [inst_4 : DecidableEq Z] [Nonempty Θ]
+  (π : Θ → S → ℝ) (ρ : Θ → Z → ℝ),
+  (∀ (θ : Θ), BayesCorrelated.IsProbability (π θ)) →
+    (∀ (θ : Θ), BayesCorrelated.IsProbability (ρ θ)) →
+      (BayesCorrelated.IsGarbling π ρ ↔
+        BayesCorrelated.MoreIncentiveConstrained (fun θ t => π θ (t ())) fun θ e => ρ θ (e ()))
 @BayesCorrelated.IsProbability : {X : Type u_1} → [Fintype X] → (X → ℝ) → Prop
 @BayesCorrelated.IsInformation : {I : Type u_1} →
   {Θ : Type u_2} →
@@ -168,3 +206,67 @@
                       (Θ → ℝ) →
                         (Θ → ((i : I) → T i) → ℝ) →
                           (I → ((i : I) → A i) → Θ → ℝ) → (Θ → ((i : I) → T i) → ((i : I) → A i) → ℝ) → Prop
+@BayesCorrelated.IsCombination : {I : Type u_1} →
+  {Θ : Type u_2} →
+    {T : I → Type u_3} →
+      {E : I → Type u_4} →
+        [Fintype I] →
+          [DecidableEq I] →
+            [(i : I) → Fintype (T i)] →
+              [(i : I) → Fintype (E i)] →
+                (Θ → ((i : I) → T i) → ℝ) →
+                  (Θ → ((i : I) → E i) → ℝ) → (Θ → ((i : I) → T i) → ((i : I) → E i) → ℝ) → Prop
+@BayesCorrelated.HasIndividualChannels : {I : Type u_1} →
+  {Θ : Type u_2} →
+    {T : I → Type u_3} →
+      {E : I → Type u_4} →
+        [Fintype I] →
+          [DecidableEq I] →
+            [(i : I) → Fintype (E i)] →
+              [(i : I) → DecidableEq (E i)] →
+                (Θ → ((i : I) → T i) → ℝ) →
+                  (Θ → ((i : I) → T i) → ((i : I) → E i) → ℝ) → ((i : I) → T i → E i → ℝ) → Prop
+@BayesCorrelated.IndividuallySufficient : {I : Type u_1} →
+  {Θ : Type u_2} →
+    {T : I → Type u_3} →
+      {E : I → Type u_4} →
+        [Fintype I] →
+          [DecidableEq I] →
+            [(i : I) → Fintype (T i)] →
+              [(i : I) → Fintype (E i)] →
+                [(i : I) → DecidableEq (E i)] → (Θ → ((i : I) → T i) → ℝ) → (Θ → ((i : I) → E i) → ℝ) → Prop
+@BayesCorrelated.FullSupportPrior : {Θ : Type u_1} → [Fintype Θ] → (Θ → ℝ) → Prop
+@BayesCorrelated.outcome : {I : Type u_1} →
+  {Θ : Type u_2} →
+    {T : I → Type u_4} →
+      [Fintype I] →
+        [DecidableEq I] →
+          [(i : I) → Fintype (T i)] →
+            {A : I → Type u_3} →
+              (Θ → ((i : I) → T i) → ℝ) → (Θ → ((i : I) → T i) → ((i : I) → A i) → ℝ) → Θ → ((i : I) → A i) → ℝ
+@BayesCorrelated.IsBCEOutcome : {I : Type u_1} →
+  {Θ : Type u_2} →
+    {T : I → Type u_4} →
+      [Fintype I] →
+        [DecidableEq I] →
+          [Fintype Θ] →
+            [(i : I) → Fintype (T i)] →
+              [(i : I) → DecidableEq (T i)] →
+                {A : I → Type u_3} →
+                  [(i : I) → Fintype (A i)] →
+                    [(i : I) → DecidableEq (A i)] →
+                      (Θ → ℝ) →
+                        (Θ → ((i : I) → T i) → ℝ) → (I → ((i : I) → A i) → Θ → ℝ) → (Θ → ((i : I) → A i) → ℝ) → Prop
+@BayesCorrelated.MoreIncentiveConstrained : {I : Type u_1} →
+  {Θ : Type u_2} →
+    {T : I → Type u_3} →
+      {E : I → Type u_4} →
+        [Fintype I] →
+          [DecidableEq I] →
+            [Fintype Θ] →
+              [(i : I) → Fintype (T i)] →
+                [(i : I) → DecidableEq (T i)] →
+                  [(i : I) → Fintype (E i)] →
+                    [(i : I) → DecidableEq (E i)] → (Θ → ((i : I) → T i) → ℝ) → (Θ → ((i : I) → E i) → ℝ) → Prop
+@BayesCorrelated.IsGarbling : {Θ : Type u_1} →
+  {S : Type u_2} → {Z : Type u_3} → [Fintype S] → [Fintype Z] → (Θ → S → ℝ) → (Θ → Z → ℝ) → Prop

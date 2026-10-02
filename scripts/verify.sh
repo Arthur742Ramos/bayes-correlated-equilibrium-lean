@@ -33,4 +33,9 @@ for kernel in ('Lean default', 'nanoda', 'con-ron'):
     assert f'{kernel} kernel accepts the solution' in log, kernel
 print(log)
 PY
+python3 - <<'PY'
+from pathlib import Path
+for path in Path('evidence').glob('*.log'):
+    path.write_text('\n'.join(line.rstrip() for line in path.read_text().splitlines()) + '\n')
+PY
 git diff --check
