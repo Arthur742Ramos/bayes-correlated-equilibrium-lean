@@ -1,0 +1,83 @@
+version: "v0.4"
+project:
+  name: "Finite Bayes Correlated Equilibrium and Information Expansions"
+  description: >-
+    Bergemann–Morris Theorem 1 for arbitrary finite players and states with
+    heterogeneous action and original-signal spaces: a normalized decision rule
+    is obedient if and only if a finite marginal-preserving information expansion
+    supports a valid mixed Bayes–Nash strategy profile inducing its joint law.
+    The recommendation expansion and the converse for arbitrary extra signals
+    and independent behavioral randomization are proved. Null fibers are handled
+    without conditioning, and exact induction is equivalent to the paper's
+    positive-support quotient. Zero prior masses are permitted, extending the
+    paper's full-support assumption. The one-player decision-problem specialization
+    and explicit examples are included. Theorem 2 is not claimed.
+  authors:
+    - "Arthur Freitas Ramos"
+    - "David Barros Hulak"
+    - "Ruy Jose Guerra Barretto de Queiroz"
+  responsible_maintainers:
+    - "Arthur Freitas Ramos"
+    - "David Barros Hulak"
+    - "Ruy Jose Guerra Barretto de Queiroz"
+  license: "BSD-3-Clause"
+repository:
+  role: "substantive-development"
+classification:
+  arxiv: ["econ.TH", "cs.GT"]
+  msc2020: ["91A27", "91A10", "91B44", "03B35"]
+sources:
+  - title: "Bayes correlated equilibrium and the comparison of information structures in games"
+    authors: ["Dirk Bergemann", "Stephen Morris"]
+    type: "paper"
+    year: 2016
+    doi: "10.3982/TE1808"
+    url: "https://economics.mit.edu/sites/default/files/publications/paper_79_bce.pdf"
+    relationship: "formalizes"
+    note: >-
+      Theoretical Economics 11, pages 487–522. Section 2, Definitions 1–5 and
+      Theorem 1, pages 493–496. The finite theorem is formalized with heterogeneous
+      spaces; the prior's full-support assumption is relaxed to nonnegative
+      normalized masses. Theorem 2 and the remainder of the paper are not claimed.
+    author_endorsement: "not-contacted"
+automation:
+  methods:
+    - method: "AI-assisted Lean proof development"
+      system: "OpenAI Codex"
+      role: "Source inspection, exact definitions, complete proofs, examples, package and verification."
+    - method: "Independent AI mathematical and source review"
+      system: "OpenAI Codex, separate reviewing agents"
+      role: "Check source fidelity, finite scope, mixed BNE, support handling, proof integrity and package claims."
+    - method: "Lean tactic automation"
+      role: "Finite-sum rewrites, simp, ring and norm_num; no native_decide."
+review:
+  status: "Review and verification evidence is recorded with source hashes in evidence; hosted workflows report results for immutable commits."
+  human_review: "No human mathematical review or original-author endorsement is claimed."
+  limitations: >-
+    Finite spaces and independent behavioral randomization conditional on each
+    player's own full signal. Arbitrarily correlated signal kernels are allowed.
+    Probability assumptions are explicit in the main theorem; BCE itself denotes
+    obedience. Extra-signal existence uses the action universe and the reverse
+    theorem is independently universe-polymorphic. No full-support prior is needed.
+    Only eight reference theorem proofs in standalone Challenge have deliberate
+    placeholders; all twelve definitions are genuine. The complete library and
+    Solution have no admissions or nonstandard axioms. Theorem 2, infinite-space
+    generalizations, and welfare or persuasion optimization are not proved.
+alignment:
+  statements:
+    - lean: "BayesCorrelated.finite_characterization"
+      description: "Full finite BCE iff a marginal-preserving expansion supports a mixed BNE inducing the decision rule."
+    - lean: "BayesCorrelated.mixedBNE_induces_BCE"
+      description: "Arbitrary finite extra signals and independently mixed strategies satisfying best responses and induction give weighted obedience."
+    - lean: "BayesCorrelated.expansion_normalized"
+      description: "Marginal preservation and original normalization imply normalization of the actual joint expansion kernel."
+    - lean: "BayesCorrelated.expansion_null_fiber"
+      description: "Nonnegative expansion mass is zero throughout every null original-signal fiber."
+    - lean: "BayesCorrelated.strategyProduct_isProbability"
+      description: "Products of valid behavioral probabilities define a normalized probability over heterogeneous joint actions."
+    - lean: "BayesCorrelated.induces_iff_positive_support"
+      description: "Exact joint-law induction iff the paper's quotient formula holds on all positive original fibers."
+    - lean: "BayesCorrelated.onePlayer_obedienceGain"
+      description: "One-player weighted obedience reduces to the explicit finite decision-problem payoff inequality."
+    - lean: "BayesCorrelated.onePlayer_characterization"
+      description: "The explicit one-player inequality iff implementation by a finite expansion and mixed optimal behavior."

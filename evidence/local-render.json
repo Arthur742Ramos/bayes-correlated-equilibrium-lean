@@ -1,0 +1,13 @@
+{
+  "status": "pass",
+  "scope": "Local macOS reproduction; no Linux sandbox or hosted workflow is claimed",
+  "policy_commit": "65f0154ed776cd26c224254aa57b379137f28b0d",
+  "verso_commit": "9f8096e40b31715b1d8d5997f15a0bd832f7e37d",
+  "challenge_sha256": "a7961d182ee96d04d1d1809acfa01d09340058bd393de4baa0232a40a87f3c29",
+  "trusted_audit_declarations": 20,
+  "html_files": {
+    "search/index.html": 31467,
+    "Challenge/index.html": 471355
+  },
+  "per_html_limit_bytes": 8388608
+}

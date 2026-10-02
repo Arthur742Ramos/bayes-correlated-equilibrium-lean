@@ -1,0 +1,35 @@
+{
+  "queried_on": "2026-10-02",
+  "endpoint": "https://data.palomar-registry.org/api/v1/results",
+  "searches": {
+    "Bayes correlated": {
+      "schema_version": 1,
+      "revision": 114,
+      "release": "2668344790f5ae0f3b47007392bf38ba4be53172a9e62431653672717abea936",
+      "totals": {
+        "results": 405,
+        "projects": 326
+      },
+      "entries": [],
+      "previous": null,
+      "next": null,
+      "dropped": [],
+      "message": null
+    },
+    "Bergemann": {
+      "schema_version": 1,
+      "revision": 114,
+      "release": "2668344790f5ae0f3b47007392bf38ba4be53172a9e62431653672717abea936",
+      "totals": {
+        "results": 405,
+        "projects": 326
+      },
+      "entries": [],
+      "previous": null,
+      "next": null,
+      "dropped": [],
+      "message": null
+    }
+  },
+  "interpretation": "Bounded search found no entries; this is not proof of novelty or absence of a prior formalization."
+}

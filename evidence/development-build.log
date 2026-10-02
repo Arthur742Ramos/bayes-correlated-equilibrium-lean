@@ -1,0 +1,62 @@
+⚠ [1001/1011] Replayed Challenge
+warning: Challenge.lean:97:8: declaration uses `sorry`
+warning: Challenge.lean:103:8: declaration uses `sorry`
+warning: Challenge.lean:119:8: declaration uses `sorry`
+warning: Challenge.lean:125:8: declaration uses `sorry`
+warning: Challenge.lean:131:8: declaration uses `sorry`
+warning: Challenge.lean:136:8: declaration uses `sorry`
+warning: Challenge.lean:149:8: declaration uses `sorry`
+warning: Challenge.lean:157:8: declaration uses `sorry`
+✔ [1003/1011] Built BCE.Defs (2.7s)
+⚠ [1004/1011] Built BCE.Implementation (1.8s)
+warning: BCE/Implementation.lean:123:0: automatically included section variable(s) unused in theorem `BayesCorrelated.Implementation.recommendation_induces`:
+  [(i : I) → Fintype (T i)]
+  [(i : I) → DecidableEq (T i)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [(i : I) → Fintype (T i)] [(i : I) → DecidableEq (T i)] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [1005/1011] Built BCE.Support (1.5s)
+warning: BCE/Support.lean:16:0: automatically included section variable(s) unused in theorem `BayesCorrelated.Implementation.expansion_normalized`:
+  [Fintype Θ]
+  [(i : I) → DecidableEq (T i)]
+  [(i : I) → DecidableEq (E i)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype Θ] [(i : I) → DecidableEq (T i)] [(i : I) → DecidableEq (E i)] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: BCE/Support.lean:24:0: automatically included section variable(s) unused in theorem `BayesCorrelated.Implementation.expansion_null_fiber`:
+  [Fintype Θ]
+  [(i : I) → Fintype (T i)]
+  [(i : I) → DecidableEq (T i)]
+  [(i : I) → DecidableEq (E i)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype Θ] [(i : I) → Fintype (T i)] [(i : I) → DecidableEq (T i)] [(i : I) → DecidableEq (E i)] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: BCE/Support.lean:32:0: automatically included section variable(s) unused in theorem `BayesCorrelated.Implementation.strategyProduct_isProbability`:
+  [(i : I) → DecidableEq (A i)]
+  [(i : I) → Fintype (T i)]
+  [(i : I) → DecidableEq (T i)]
+  [(i : I) → Fintype (E i)]
+  [(i : I) → DecidableEq (E i)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [(i : I) →
+  DecidableEq
+    (A
+      i)] [(i : I) →
+  Fintype (T i)] [(i : I) → DecidableEq (T i)] [(i : I) → Fintype (E i)] [(i : I) → DecidableEq (E i)] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: BCE/Support.lean:43:0: automatically included section variable(s) unused in theorem `BayesCorrelated.Implementation.induces_iff_positive_support`:
+  [(i : I) → Fintype (A i)]
+  [(i : I) → DecidableEq (A i)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [(i : I) → Fintype (A i)] [(i : I) → DecidableEq (A i)] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+✔ [1006/1011] Built BCE.OnePlayer (1.5s)
+✔ [1007/1011] Built BCE.Examples (1.6s)
+✔ [1008/1011] Built BCE (1.5s)
+✔ [1010/1011] Built Solution (1.6s)
+Build completed successfully (1011 jobs).

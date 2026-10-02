@@ -1,0 +1,33 @@
+{
+  "challenge_module": "Challenge",
+  "solution_module": "Solution",
+  "theorem_names": [
+    "BayesCorrelated.finite_characterization",
+    "BayesCorrelated.mixedBNE_induces_BCE",
+    "BayesCorrelated.expansion_normalized",
+    "BayesCorrelated.expansion_null_fiber",
+    "BayesCorrelated.strategyProduct_isProbability",
+    "BayesCorrelated.induces_iff_positive_support",
+    "BayesCorrelated.onePlayer_obedienceGain",
+    "BayesCorrelated.onePlayer_characterization"
+  ],
+  "definition_names": [
+    "BayesCorrelated.IsProbability",
+    "BayesCorrelated.IsInformation",
+    "BayesCorrelated.IsDecisionRule",
+    "BayesCorrelated.obedienceGain",
+    "BayesCorrelated.BCE",
+    "BayesCorrelated.IsExpansion",
+    "BayesCorrelated.IsStrategy",
+    "BayesCorrelated.strategyProduct",
+    "BayesCorrelated.Induces",
+    "BayesCorrelated.bestResponseGain",
+    "BayesCorrelated.MixedBNE",
+    "BayesCorrelated.Implementable"
+  ],
+  "permitted_axioms": [
+    "propext",
+    "Quot.sound",
+    "Classical.choice"
+  ]
+}
