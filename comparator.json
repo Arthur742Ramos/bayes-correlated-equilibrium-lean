@@ -9,7 +9,12 @@
     "BayesCorrelated.strategyProduct_isProbability",
     "BayesCorrelated.induces_iff_positive_support",
     "BayesCorrelated.onePlayer_obedienceGain",
-    "BayesCorrelated.onePlayer_characterization"
+    "BayesCorrelated.onePlayer_characterization",
+    "BayesCorrelated.information_order_characterization",
+    "BayesCorrelated.individuallySufficient_outcome",
+    "BayesCorrelated.moreIncentiveConstrained_outcome_any_universe",
+    "BayesCorrelated.onePlayer_individual_sufficiency",
+    "BayesCorrelated.onePlayer_information_order"
   ],
   "definition_names": [
     "BayesCorrelated.IsProbability",
@@ -23,7 +28,15 @@
     "BayesCorrelated.Induces",
     "BayesCorrelated.bestResponseGain",
     "BayesCorrelated.MixedBNE",
-    "BayesCorrelated.Implementable"
+    "BayesCorrelated.Implementable",
+    "BayesCorrelated.IsCombination",
+    "BayesCorrelated.HasIndividualChannels",
+    "BayesCorrelated.IndividuallySufficient",
+    "BayesCorrelated.FullSupportPrior",
+    "BayesCorrelated.outcome",
+    "BayesCorrelated.IsBCEOutcome",
+    "BayesCorrelated.MoreIncentiveConstrained",
+    "BayesCorrelated.IsGarbling"
   ],
   "permitted_axioms": [
     "propext",

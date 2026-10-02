@@ -1,6 +1,6 @@
 version: "v0.4"
 project:
-  name: "Finite Bayes Correlated Equilibrium and Information Expansions"
+  name: "Finite Bayes Correlated Equilibrium, Information Expansions and Information Order"
   description: >-
     Bergemann–Morris Theorem 1 for arbitrary finite players and states with
     heterogeneous action and original-signal spaces: a normalized decision rule
@@ -11,7 +11,11 @@ project:
     without conditioning, and exact induction is equivalent to the paper's
     positive-support quotient. Zero prior masses are permitted, extending the
     paper's full-support assumption. The one-player decision-problem specialization
-    and explicit examples are included. Theorem 2 is not claimed.
+    and explicit examples are included. Theorem 2 proves that individual
+    sufficiency is equivalent to BCE outcome inclusion across all finite basic
+    games with arbitrary heterogeneous actions and utilities and full-support
+    common priors, on a nonempty finite state space. Its converse constructs
+    actual couplings from finite quadratic-scoring games and weighted compactness.
   authors:
     - "Arthur Freitas Ramos"
     - "David Barros Hulak"
@@ -38,7 +42,9 @@ sources:
       Theoretical Economics 11, pages 487–522. Section 2, Definitions 1–5 and
       Theorem 1, pages 493–496. The finite theorem is formalized with heterogeneous
       spaces; the prior's full-support assumption is relaxed to nonnegative
-      normalized masses. Theorem 2 and the remainder of the paper are not claimed.
+      normalized masses. Definition 6, Definition 7 and Theorem 2, pages 497 and
+      502–506, are formalized with a finite signed-coordinate scoring construction
+      and weighted compactness. The remainder of the paper is not claimed.
     author_endorsement: "not-contacted"
 automation:
   methods:
@@ -58,11 +64,14 @@ review:
     player's own full signal. Arbitrarily correlated signal kernels are allowed.
     Probability assumptions are explicit in the main theorem; BCE itself denotes
     obedience. Extra-signal existence uses the action universe and the reverse
-    theorem is independently universe-polymorphic. No full-support prior is needed.
-    Only eight reference theorem proofs in standalone Challenge have deliberate
-    placeholders; all twelve definitions are genuine. The complete library and
-    Solution have no admissions or nonstandard axioms. Theorem 2, infinite-space
-    generalizations, and welfare or persuasion optimization are not proved.
+    theorem is independently universe-polymorphic. Theorem 1 permits zero-prior
+    states. Theorem 2 assumes nonempty states and ranges over full-support priors;
+    an explicit action-reindexing theorem establishes arbitrary finite action
+    universes. Signal events may have zero probability. Only thirteen reference
+    theorem proofs in standalone Challenge have deliberate placeholders; all
+    twenty definitions are genuine. The complete library and Solution have no
+    admissions or nonstandard axioms. Infinite-space generalizations and welfare
+    or persuasion optimization are outside the claim.
 alignment:
   statements:
     - lean: "BayesCorrelated.finite_characterization"
@@ -81,3 +90,13 @@ alignment:
       description: "One-player weighted obedience reduces to the explicit finite decision-problem payoff inequality."
     - lean: "BayesCorrelated.onePlayer_characterization"
       description: "The explicit one-player inequality iff implementation by a finite expansion and mixed optimal behavior."
+    - lean: "BayesCorrelated.information_order_characterization"
+      description: "Individual sufficiency iff BCE outcome inclusion over all finite basic games with full-support common priors."
+    - lean: "BayesCorrelated.individuallySufficient_outcome"
+      description: "An actual individual-sufficiency coupling transports any BCE outcome through arbitrary finite heterogeneous actions."
+    - lean: "BayesCorrelated.moreIncentiveConstrained_outcome_any_universe"
+      description: "The all-game outcome order applies to action carriers in any Lean universe by finite-cardinality reindexing."
+    - lean: "BayesCorrelated.onePlayer_individual_sufficiency"
+      description: "One-player individual sufficiency is exactly a state-independent stochastic garbling."
+    - lean: "BayesCorrelated.onePlayer_information_order"
+      description: "One-player stochastic garbling iff BCE outcome inclusion across all finite decision games."

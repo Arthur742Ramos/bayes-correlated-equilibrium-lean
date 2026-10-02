@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "Please cite the exact immutable repository commit used for verification."
-title: "Finite Bayes Correlated Equilibrium and Information Expansions in Lean"
+title: "Finite Bayes Correlated Equilibrium, Information Expansions and Information Order in Lean"
 type: software
 authors:
   - given-names: Arthur Freitas

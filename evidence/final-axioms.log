@@ -1,12 +1,18 @@
-'BayesCorrelated.Implementation.expansion_normalized' depends on axioms: [propext, Classical.choice, Quot.sound]
-'BayesCorrelated.Implementation.expansion_null_fiber' depends on axioms: [propext, Classical.choice, Quot.sound]
-'BayesCorrelated.Implementation.strategyProduct_isProbability' depends on axioms: [propext,
+'BayesCorrelated.OrderImplementation.profileEquiv' depends on axioms: [propext, Quot.sound]
+'BayesCorrelated.OrderImplementation.profileEquiv_update' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BayesCorrelated.OrderImplementation.reindexRule' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BayesCorrelated.OrderImplementation.reindexUtility' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BayesCorrelated.OrderImplementation.reindexRule_valid' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BayesCorrelated.OrderImplementation.reindex_gain' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BayesCorrelated.OrderImplementation.reindex_BCE' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BayesCorrelated.OrderImplementation.reindexOutcome' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BayesCorrelated.OrderImplementation.reindex_outcome' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BayesCorrelated.OrderImplementation.profileEquiv_symm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BayesCorrelated.OrderImplementation.reindexUtility_back' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BayesCorrelated.OrderImplementation.reindexOutcome_back' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BayesCorrelated.OrderImplementation.moreIncentiveConstrained_outcome_any_universe' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
-'BayesCorrelated.Implementation.induces_iff_positive_support' depends on axioms: [propext, Classical.choice, Quot.sound]
-'BayesCorrelated.Implementation.expansion_extra_information' depends on axioms: [propext, Classical.choice, Quot.sound]
-'BayesCorrelated.Implementation.onePlayer_obedienceGain' depends on axioms: [propext, Classical.choice, Quot.sound]
-'BayesCorrelated.Implementation.onePlayer_characterization' depends on axioms: [propext, Classical.choice, Quot.sound]
 'BayesCorrelated.IsProbability' depends on axioms: [propext, Classical.choice, Quot.sound]
 'BayesCorrelated.IsInformation' depends on axioms: [propext, Classical.choice, Quot.sound]
 'BayesCorrelated.IsDecisionRule' depends on axioms: [propext, Classical.choice, Quot.sound]
@@ -50,6 +56,154 @@
 'BayesCorrelated.Implementation.recommendation_expandedGain' depends on axioms: [propext, Classical.choice, Quot.sound]
 'BayesCorrelated.Implementation.recommendation_mixedBNE' depends on axioms: [propext, Classical.choice, Quot.sound]
 'BayesCorrelated.Implementation.finite_characterization' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BayesCorrelated.OrderImplementation.individual_channels_of_zero_residual' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'BayesCorrelated.OrderImplementation.uniformPrior' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BayesCorrelated.OrderImplementation.uniformPrior_fullSupport' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'BayesCorrelated.OrderImplementation.moreIncentiveConstrained_individuallySufficient' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'BayesCorrelated.OrderImplementation.information_order_characterization' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'BayesCorrelated.Implementation.onePlayer_obedienceGain' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BayesCorrelated.Implementation.onePlayer_characterization' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BayesCorrelated.IsGarbling' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BayesCorrelated.OrderImplementation.lift_information' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BayesCorrelated.OrderImplementation.onePlayer_individual_sufficiency' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'BayesCorrelated.OrderImplementation.onePlayer_information_order' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'BayesCorrelated.OrderImplementation.typePriorMass' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BayesCorrelated.OrderImplementation.coupledTypeMass' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BayesCorrelated.OrderImplementation.coupledCellMass' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BayesCorrelated.OrderImplementation.independenceResidual' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BayesCorrelated.OrderImplementation.combination_entry_le_one' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'BayesCorrelated.OrderImplementation.combination_isClosed' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BayesCorrelated.OrderImplementation.combination_isCompact' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BayesCorrelated.OrderImplementation.independenceResidual_continuous' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'BayesCorrelated.OrderImplementation.residualBound_isClosed' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BayesCorrelated.OrderImplementation.exact_coupling_of_approximate' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'BayesCorrelated.IsCombination' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BayesCorrelated.HasIndividualChannels' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BayesCorrelated.IndividuallySufficient' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BayesCorrelated.FullSupportPrior' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BayesCorrelated.outcome' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BayesCorrelated.IsBCEOutcome' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BayesCorrelated.MoreIncentiveConstrained' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BayesCorrelated.OrderExamples.revelation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BayesCorrelated.OrderExamples.redundantNull' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BayesCorrelated.OrderExamples.revelation_valid' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BayesCorrelated.OrderExamples.redundantNull_valid' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BayesCorrelated.OrderExamples.revelation_garbles_to_null' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BayesCorrelated.OrderExamples.revelation_more_constrained' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BayesCorrelated.OrderExamples.null_cannot_garble_to_revelation' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'BayesCorrelated.OrderExamples.null_not_more_constrained' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BayesCorrelated.OrderExamples.correlatedSignals' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BayesCorrelated.OrderExamples.correlatedSignals_valid' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BayesCorrelated.OrderExamples.correlatedSignals_marginal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BayesCorrelated.OrderExamples.null_sufficient_for_correlated_signals' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'BayesCorrelated.OrderExamples.correlated_channel_is_not_product' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'BayesCorrelated.OrderImplementation.typePriorMass_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BayesCorrelated.OrderImplementation.typePriorMass_le_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BayesCorrelated.OrderImplementation.coupledTypeMass_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BayesCorrelated.OrderImplementation.coupledTypeMass_le_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BayesCorrelated.OrderImplementation.coupledTypeMass_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BayesCorrelated.OrderImplementation.null_type_row' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BayesCorrelated.OrderImplementation.transferJoint' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BayesCorrelated.OrderImplementation.transferJoint_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BayesCorrelated.OrderImplementation.transferJoint_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BayesCorrelated.OrderImplementation.combination_null_right' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BayesCorrelated.OrderImplementation.transferredRule' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BayesCorrelated.OrderImplementation.transferredRule_joint' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BayesCorrelated.OrderImplementation.transferredRule_valid' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BayesCorrelated.OrderImplementation.transferredRule_outcome' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BayesCorrelated.OrderImplementation.transferredRule_gain' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BayesCorrelated.OrderImplementation.transferredRule_BCE' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BayesCorrelated.OrderImplementation.probability_nonempty' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BayesCorrelated.OrderImplementation.individuallySufficient_outcome' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'BayesCorrelated.OrderImplementation.individuallySufficient_moreIncentiveConstrained' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'BayesCorrelated.OrderImplementation.scoring_residual_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BayesCorrelated.OrderImplementation.approximate_couplings_of_order' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'BayesCorrelated.OrderImplementation.quadraticScore' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BayesCorrelated.OrderImplementation.mass_div_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BayesCorrelated.OrderImplementation.weighted_score_gap' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BayesCorrelated.OrderImplementation.weighted_score_gap_nonneg' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'BayesCorrelated.OrderImplementation.coordinatePerturb' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BayesCorrelated.OrderImplementation.perturb_square_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BayesCorrelated.OrderImplementation.weighted_score_perturb' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BayesCorrelated.OrderImplementation.signed_tests_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BayesCorrelated.OrderImplementation.truthful_outcome_at' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BayesCorrelated.OrderImplementation.truthful_outcome_off' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BayesCorrelated.OrderImplementation.sum_embedTypes' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BayesCorrelated.OrderImplementation.ruleCombination' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BayesCorrelated.OrderImplementation.transferred_joint_off' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BayesCorrelated.OrderImplementation.ruleCombination_valid' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BayesCorrelated.OrderImplementation.scoring_game_transfer' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BayesCorrelated.OrderImplementation.coupledScoreMass' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BayesCorrelated.OrderImplementation.priorMass_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BayesCorrelated.OrderImplementation.coupledMass_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BayesCorrelated.OrderImplementation.ruleCombination_scoring_gain' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'BayesCorrelated.OrderImplementation.OpponentTypes' does not depend on any axioms
+'BayesCorrelated.OrderImplementation.ScoreCoordinate' does not depend on any axioms
+'BayesCorrelated.OrderImplementation.TestAction' does not depend on any axioms
+'BayesCorrelated.OrderImplementation.opponentTypesFintype' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BayesCorrelated.OrderImplementation.opponentTypesDecidableEq' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'BayesCorrelated.OrderImplementation.scoreCoordinateFintype' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BayesCorrelated.OrderImplementation.testActionFintype' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BayesCorrelated.OrderImplementation.testActionDecidableEq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BayesCorrelated.OrderImplementation.originalMass' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BayesCorrelated.OrderImplementation.originalTypeMass' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BayesCorrelated.OrderImplementation.originalBelief' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BayesCorrelated.OrderImplementation.testReport' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BayesCorrelated.OrderImplementation.reportType' does not depend on any axioms
+'BayesCorrelated.OrderImplementation.embedTypes' does not depend on any axioms
+'BayesCorrelated.OrderImplementation.testUtility' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BayesCorrelated.OrderImplementation.truthfulRule' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BayesCorrelated.OrderImplementation.truthfulRule_valid' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BayesCorrelated.OrderImplementation.embedTypes_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BayesCorrelated.OrderImplementation.testUtility_update' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BayesCorrelated.OrderImplementation.testUtility_embed' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BayesCorrelated.OrderImplementation.sum_own_type' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BayesCorrelated.OrderImplementation.truthful_gain' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BayesCorrelated.OrderImplementation.truthful_gain_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BayesCorrelated.OrderImplementation.truthful_BCE' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BayesCorrelated.Implementation.expansion_normalized' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BayesCorrelated.Implementation.expansion_null_fiber' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BayesCorrelated.Implementation.strategyProduct_isProbability' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'BayesCorrelated.Implementation.induces_iff_positive_support' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BayesCorrelated.Implementation.expansion_extra_information' depends on axioms: [propext, Classical.choice, Quot.sound]
 'BayesCorrelated.finite_characterization' depends on axioms: [propext, Classical.choice, Quot.sound]
 'BayesCorrelated.mixedBNE_induces_BCE' depends on axioms: [propext, Classical.choice, Quot.sound]
 'BayesCorrelated.expansion_normalized' depends on axioms: [propext, Classical.choice, Quot.sound]
@@ -58,3 +212,10 @@
 'BayesCorrelated.induces_iff_positive_support' depends on axioms: [propext, Classical.choice, Quot.sound]
 'BayesCorrelated.onePlayer_obedienceGain' depends on axioms: [propext, Classical.choice, Quot.sound]
 'BayesCorrelated.onePlayer_characterization' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BayesCorrelated.information_order_characterization' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BayesCorrelated.individuallySufficient_outcome' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BayesCorrelated.moreIncentiveConstrained_outcome_any_universe' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'BayesCorrelated.onePlayer_individual_sufficiency' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BayesCorrelated.onePlayer_information_order' depends on axioms: [propext, Classical.choice, Quot.sound]

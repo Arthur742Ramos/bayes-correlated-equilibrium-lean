@@ -84,3 +84,75 @@ theorem onePlayer_characterization (ψ : Θ → ℝ) (π : Θ → S → ℝ)
   exact Implementation.onePlayer_characterization ψ π u σ hψ hπ hσ
 
 end BayesCorrelated
+namespace BayesCorrelated
+universe uI uΘ uT uE
+variable {I : Type uI} {Θ : Type uΘ} {T : I → Type uT} {E : I → Type uE}
+variable [Fintype I] [DecidableEq I] [Fintype Θ] [Nonempty Θ]
+variable [∀ i, Fintype (T i)] [∀ i, DecidableEq (T i)]
+variable [∀ i, Fintype (E i)] [∀ i, DecidableEq (E i)]
+
+theorem information_order_characterization
+    (π : Θ → (∀ i, T i) → ℝ) (ρ : Θ → (∀ i, E i) → ℝ)
+    (hπ : IsInformation π) (hρ : IsInformation ρ) :
+    IndividuallySufficient π ρ ↔ MoreIncentiveConstrained π ρ := by
+  exact OrderImplementation.information_order_characterization π ρ hπ hρ
+
+end BayesCorrelated
+namespace BayesCorrelated
+universe uI uΘ uA uT uE
+variable {I : Type uI} {Θ : Type uΘ} {A : I → Type uA}
+variable {T : I → Type uT} {E : I → Type uE}
+variable [Fintype I] [DecidableEq I] [Fintype Θ]
+variable [∀ i, Fintype (A i)] [∀ i, DecidableEq (A i)]
+variable [∀ i, Fintype (T i)] [∀ i, DecidableEq (T i)]
+variable [∀ i, Fintype (E i)] [∀ i, DecidableEq (E i)]
+
+theorem individuallySufficient_outcome [Nonempty Θ]
+    (ψ : Θ → ℝ) (π : Θ → (∀ i, T i) → ℝ) (ρ : Θ → (∀ i, E i) → ℝ)
+    (hπ : IsInformation π) (hρ : IsInformation ρ)
+    (hs : IndividuallySufficient π ρ)
+    (u : I → (∀ i, A i) → Θ → ℝ) (ν : Θ → (∀ i, A i) → ℝ)
+    (hv : IsBCEOutcome ψ π u ν) : IsBCEOutcome ψ ρ u ν := by
+  exact OrderImplementation.individuallySufficient_outcome ψ π ρ hπ hρ hs u ν hv
+
+end BayesCorrelated
+namespace BayesCorrelated
+universe uI uΘ uT uA uB uE
+variable {I : Type uI} {Θ : Type uΘ} {T : I → Type uT}
+variable {A : I → Type uA} {B : I → Type uB}
+variable [Fintype I] [DecidableEq I] [Fintype Θ]
+variable [∀ i, Fintype (T i)] [∀ i, DecidableEq (T i)]
+variable [∀ i, Fintype (A i)] [∀ i, DecidableEq (A i)]
+variable [∀ i, Fintype (B i)] [∀ i, DecidableEq (B i)]
+
+theorem moreIncentiveConstrained_outcome_any_universe
+    {E : I → Type uE} [∀ i, Fintype (E i)] [∀ i, DecidableEq (E i)]
+    (ψ : Θ → ℝ) (π : Θ → (∀ i, T i) → ℝ) (ρ : Θ → (∀ i, E i) → ℝ)
+    (ho : MoreIncentiveConstrained π ρ) (hψ : FullSupportPrior ψ)
+    (u : I → (∀ i, A i) → Θ → ℝ) (ν : Θ → (∀ i, A i) → ℝ)
+    (hv : IsBCEOutcome ψ π u ν) : IsBCEOutcome ψ ρ u ν := by
+  exact OrderImplementation.moreIncentiveConstrained_outcome_any_universe ψ π ρ ho hψ u ν hv
+
+end BayesCorrelated
+namespace BayesCorrelated
+variable {Θ S Z : Type*} [Fintype Θ] [Fintype S] [DecidableEq S]
+variable [Fintype Z] [DecidableEq Z]
+
+theorem onePlayer_individual_sufficiency (π : Θ → S → ℝ) (ρ : Θ → Z → ℝ)
+    (hπ : ∀ θ, IsProbability (π θ)) :
+    IndividuallySufficient (I := Unit) (T := fun _ => S) (E := fun _ => Z)
+      (fun θ t => π θ (t ())) (fun θ e => ρ θ (e ())) ↔ IsGarbling π ρ := by
+  exact OrderImplementation.onePlayer_individual_sufficiency π ρ hπ
+
+end BayesCorrelated
+namespace BayesCorrelated
+variable {Θ S Z : Type*} [Fintype Θ] [Fintype S] [DecidableEq S]
+variable [Fintype Z] [DecidableEq Z]
+
+theorem onePlayer_information_order [Nonempty Θ] (π : Θ → S → ℝ) (ρ : Θ → Z → ℝ)
+    (hπ : ∀ θ, IsProbability (π θ)) (hρ : ∀ θ, IsProbability (ρ θ)) :
+    IsGarbling π ρ ↔ MoreIncentiveConstrained (I := Unit) (T := fun _ => S) (E := fun _ => Z)
+      (fun θ t => π θ (t ())) (fun θ e => ρ θ (e ())) := by
+  exact OrderImplementation.onePlayer_information_order π ρ hπ hρ
+
+end BayesCorrelated

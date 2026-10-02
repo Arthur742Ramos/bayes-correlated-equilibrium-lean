@@ -20,6 +20,7 @@ try:
 finally:
     path.unlink()
 rows = dict(re.findall(r"'([^']+)' depends on axioms:\s*\[([^\]]*)\]", result.stdout))
+rows.update({name: "" for name in re.findall(r"'([^']+)' does not depend on any axioms", result.stdout)})
 assert set(rows) == set(selected), rows
 permitted = set(config["permitted_axioms"])
 for name in selected:
@@ -29,4 +30,4 @@ for name in selected:
     else:
         assert used <= permitted, (name, used)
 (ROOT / "evidence/challenge-reference-axioms.log").write_text(result.stdout)
-print("Reference audit: exactly eight selected theorem placeholders; all twelve definitions genuine")
+print("Reference audit: exactly thirteen selected theorem placeholders; all twenty definitions genuine")

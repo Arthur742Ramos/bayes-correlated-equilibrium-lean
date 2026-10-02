@@ -1,4 +1,4 @@
-⚠ [117/203] Replayed Verso.Parser
+⚠ [104/184] Replayed Verso.Parser
 warning: src/verso/Verso/Parser.lean:243:42: Tactic `constructor` applied constructor `List.Mem.head`, but `List.Mem.tail` also matches the goal.
 
 Hint: Use `constructor!` to apply the first matching constructor without this warning:
@@ -19,18 +19,23 @@ warning: src/verso/Verso/Parser.lean:258:42: Tactic `constructor` applied constr
 
 Hint: Use `constructor!` to apply the first matching constructor without this warning:
   [apply] constructor!
-⚠ [312/343] Replayed VersoLiterateMain
+⚠ [310/430] Replayed VersoLiterateMain
 warning: src/verso-literate/VersoLiterateMain.lean:15:0: 'Lean.Server.InfoUtils' has been deprecated: please replace this import by
 
 import Lean.Elab.InfoTree.Util
-⚠ [1231/1233] Built Challenge (4.7s)
-warning: Challenge.lean:97:8: declaration uses `sorry`
-warning: Challenge.lean:103:8: declaration uses `sorry`
-warning: Challenge.lean:119:8: declaration uses `sorry`
-warning: Challenge.lean:125:8: declaration uses `sorry`
-warning: Challenge.lean:131:8: declaration uses `sorry`
-warning: Challenge.lean:136:8: declaration uses `sorry`
-warning: Challenge.lean:149:8: declaration uses `sorry`
-warning: Challenge.lean:157:8: declaration uses `sorry`
-✔ [1232/1233] Built PalomarChallengeRender/Challenge:literate (8.0s)
+⚠ [1231/1233] Built Challenge (5.4s)
+warning: Challenge.lean:98:8: declaration uses `sorry`
+warning: Challenge.lean:104:8: declaration uses `sorry`
+warning: Challenge.lean:120:8: declaration uses `sorry`
+warning: Challenge.lean:126:8: declaration uses `sorry`
+warning: Challenge.lean:132:8: declaration uses `sorry`
+warning: Challenge.lean:137:8: declaration uses `sorry`
+warning: Challenge.lean:150:8: declaration uses `sorry`
+warning: Challenge.lean:158:8: declaration uses `sorry`
+warning: Challenge.lean:240:8: declaration uses `sorry`
+warning: Challenge.lean:256:8: declaration uses `sorry`
+warning: Challenge.lean:274:8: declaration uses `sorry`
+warning: Challenge.lean:287:8: declaration uses `sorry`
+warning: Challenge.lean:298:8: declaration uses `sorry`
+✔ [1232/1233] Built PalomarChallengeRender/Challenge:literate (12s)
 Build completed successfully (1233 jobs).

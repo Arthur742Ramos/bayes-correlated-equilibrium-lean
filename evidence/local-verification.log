@@ -1,24 +1,29 @@
-All 58 authored declarations pass the transitive axiom audit
-Package checks passed: 167 Challenge lines; 8508 bytes
-Reference audit: exactly eight selected theorem placeholders; all twelve definitions genuine
-All 58 authored declarations pass the transitive axiom audit
-Package checks passed: 167 Challenge lines; 8508 bytes
+All 179 authored declarations pass the transitive axiom audit
+Package checks passed: 304 Challenge lines; 14996 bytes
+Reference audit: exactly thirteen selected theorem placeholders; all twenty definitions genuine
+All 179 authored declarations pass the transitive axiom audit
+Package checks passed: 304 Challenge lines; 14996 bytes
 WARNING: Sandbox disabled, this run is not trustworthy.
 Resolving dependencies
 Building Challenge
 ⚠ [918/919] Replayed Challenge
-warning: Challenge.lean:97:8: declaration uses `sorry`
-warning: Challenge.lean:103:8: declaration uses `sorry`
-warning: Challenge.lean:119:8: declaration uses `sorry`
-warning: Challenge.lean:125:8: declaration uses `sorry`
-warning: Challenge.lean:131:8: declaration uses `sorry`
-warning: Challenge.lean:136:8: declaration uses `sorry`
-warning: Challenge.lean:149:8: declaration uses `sorry`
-warning: Challenge.lean:157:8: declaration uses `sorry`
+warning: Challenge.lean:98:8: declaration uses `sorry`
+warning: Challenge.lean:104:8: declaration uses `sorry`
+warning: Challenge.lean:120:8: declaration uses `sorry`
+warning: Challenge.lean:126:8: declaration uses `sorry`
+warning: Challenge.lean:132:8: declaration uses `sorry`
+warning: Challenge.lean:137:8: declaration uses `sorry`
+warning: Challenge.lean:150:8: declaration uses `sorry`
+warning: Challenge.lean:158:8: declaration uses `sorry`
+warning: Challenge.lean:240:8: declaration uses `sorry`
+warning: Challenge.lean:256:8: declaration uses `sorry`
+warning: Challenge.lean:274:8: declaration uses `sorry`
+warning: Challenge.lean:287:8: declaration uses `sorry`
+warning: Challenge.lean:298:8: declaration uses `sorry`
 Build completed successfully (919 jobs).
-Exporting #[Quot, Quot.mk, Quot.lift, Quot.ind, BayesCorrelated.finite_characterization, BayesCorrelated.mixedBNE_induces_BCE, BayesCorrelated.expansion_normalized, BayesCorrelated.expansion_null_fiber, BayesCorrelated.strategyProduct_isProbability, BayesCorrelated.induces_iff_positive_support, BayesCorrelated.onePlayer_obedienceGain, BayesCorrelated.onePlayer_characterization, propext, Quot.sound, Classical.choice, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight, String.ofList, Char.ofNat, List, eagerReduce, Nat, String, String.mk, Char, optParam, autoParam, semiOutParam, outParam, BayesCorrelated.IsProbability, BayesCorrelated.IsInformation, BayesCorrelated.IsDecisionRule, BayesCorrelated.obedienceGain, BayesCorrelated.BCE, BayesCorrelated.IsExpansion, BayesCorrelated.IsStrategy, BayesCorrelated.strategyProduct, BayesCorrelated.Induces, BayesCorrelated.bestResponseGain, BayesCorrelated.MixedBNE, BayesCorrelated.Implementable] from Challenge
+Exporting #[Quot, Quot.mk, Quot.lift, Quot.ind, BayesCorrelated.finite_characterization, BayesCorrelated.mixedBNE_induces_BCE, BayesCorrelated.expansion_normalized, BayesCorrelated.expansion_null_fiber, BayesCorrelated.strategyProduct_isProbability, BayesCorrelated.induces_iff_positive_support, BayesCorrelated.onePlayer_obedienceGain, BayesCorrelated.onePlayer_characterization, BayesCorrelated.information_order_characterization, BayesCorrelated.individuallySufficient_outcome, BayesCorrelated.moreIncentiveConstrained_outcome_any_universe, BayesCorrelated.onePlayer_individual_sufficiency, BayesCorrelated.onePlayer_information_order, propext, Quot.sound, Classical.choice, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight, String.ofList, Char.ofNat, List, eagerReduce, Nat, String, String.mk, Char, optParam, autoParam, semiOutParam, outParam, BayesCorrelated.IsProbability, BayesCorrelated.IsInformation, BayesCorrelated.IsDecisionRule, BayesCorrelated.obedienceGain, BayesCorrelated.BCE, BayesCorrelated.IsExpansion, BayesCorrelated.IsStrategy, BayesCorrelated.strategyProduct, BayesCorrelated.Induces, BayesCorrelated.bestResponseGain, BayesCorrelated.MixedBNE, BayesCorrelated.Implementable, BayesCorrelated.IsCombination, BayesCorrelated.HasIndividualChannels, BayesCorrelated.IndividuallySufficient, BayesCorrelated.FullSupportPrior, BayesCorrelated.outcome, BayesCorrelated.IsBCEOutcome, BayesCorrelated.MoreIncentiveConstrained, BayesCorrelated.IsGarbling] from Challenge
 Building Solution
-⚠ [981/1008] Replayed BCE.Implementation
+⚠ [980/1112] Replayed BCE.Implementation
 warning: BCE/Implementation.lean:123:0: automatically included section variable(s) unused in theorem `BayesCorrelated.Implementation.recommendation_induces`:
   [(i : I) → Fintype (T i)]
   [(i : I) → DecidableEq (T i)]
@@ -26,7 +31,7 @@ consider restructuring your `variable` declarations so that the variables are no
   omit [(i : I) → Fintype (T i)] [(i : I) → DecidableEq (T i)] in theorem ...
 
 Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
-⚠ [988/1008] Replayed BCE.Support
+⚠ [987/1112] Replayed BCE.Support
 warning: BCE/Support.lean:16:0: automatically included section variable(s) unused in theorem `BayesCorrelated.Implementation.expansion_normalized`:
   [Fintype Θ]
   [(i : I) → DecidableEq (T i)]
@@ -65,12 +70,292 @@ consider restructuring your `variable` declarations so that the variables are no
   omit [(i : I) → Fintype (A i)] [(i : I) → DecidableEq (A i)] in theorem ...
 
 Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
-Build completed successfully (1008 jobs).
-Exporting #[Quot, Quot.mk, Quot.lift, Quot.ind, BayesCorrelated.finite_characterization, BayesCorrelated.mixedBNE_induces_BCE, BayesCorrelated.expansion_normalized, BayesCorrelated.expansion_null_fiber, BayesCorrelated.strategyProduct_isProbability, BayesCorrelated.induces_iff_positive_support, BayesCorrelated.onePlayer_obedienceGain, BayesCorrelated.onePlayer_characterization, propext, Quot.sound, Classical.choice, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight, String.ofList, Char.ofNat, List, eagerReduce, Nat, String, String.mk, Char, optParam, autoParam, semiOutParam, outParam, BayesCorrelated.IsProbability, BayesCorrelated.IsInformation, BayesCorrelated.IsDecisionRule, BayesCorrelated.obedienceGain, BayesCorrelated.BCE, BayesCorrelated.IsExpansion, BayesCorrelated.IsStrategy, BayesCorrelated.strategyProduct, BayesCorrelated.Induces, BayesCorrelated.bestResponseGain, BayesCorrelated.MixedBNE, BayesCorrelated.Implementable] from Solution
+⚠ [1034/1112] Replayed BCE.OrderTransport
+warning: BCE/OrderTransport.lean:23:0: automatically included section variable(s) unused in theorem `BayesCorrelated.OrderImplementation.transferJoint_nonneg`:
+  [Fintype Θ]
+  [(i : I) → DecidableEq (A i)]
+  [(i : I) → DecidableEq (T i)]
+  [(i : I) → DecidableEq (E i)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype
+  Θ] [(i : I) → DecidableEq (A i)] [(i : I) → DecidableEq (T i)] [(i : I) → DecidableEq (E i)] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: BCE/OrderTransport.lean:30:0: automatically included section variable(s) unused in theorem `BayesCorrelated.OrderImplementation.transferJoint_sum`:
+  [Fintype Θ]
+  [(i : I) → DecidableEq (A i)]
+  [(i : I) → DecidableEq (T i)]
+  [(i : I) → DecidableEq (E i)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype
+  Θ] [(i : I) → DecidableEq (A i)] [(i : I) → DecidableEq (T i)] [(i : I) → DecidableEq (E i)] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: BCE/OrderTransport.lean:40:0: automatically included section variable(s) unused in theorem `BayesCorrelated.OrderImplementation.combination_null_right`:
+  [Fintype Θ]
+  [(i : I) → DecidableEq (T i)]
+  [(i : I) → DecidableEq (E i)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype Θ] [(i : I) → DecidableEq (T i)] [(i : I) → DecidableEq (E i)] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: BCE/OrderTransport.lean:53:0: automatically included section variable(s) unused in theorem `BayesCorrelated.OrderImplementation.transferredRule_joint`:
+  [(i : I) → Fintype (A i)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [(i : I) → Fintype (A i)] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: BCE/OrderTransport.lean:159:2: Try this:
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: BCE/OrderTransport.lean:173:2: Try this:
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: BCE/OrderTransport.lean:175:2: Try this:
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [1035/1112] Replayed BCE.ScoringGame
+warning: BCE/ScoringGame.lean:57:32: Variable name `θ` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _θ
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: BCE/ScoringGame.lean:62:0: automatically included section variable(s) unused in theorem `BayesCorrelated.OrderImplementation.truthfulRule_valid`:
+  [(i : I) → DecidableEq (T i)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [(i : I) → DecidableEq (T i)] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: BCE/ScoringGame.lean:69:0: automatically included section variable(s) unused in theorem `BayesCorrelated.OrderImplementation.embedTypes_injective`:
+  [Fintype I]
+  [DecidableEq I]
+  [Fintype Θ]
+  [(i : I) → Fintype (T i)]
+  [(i : I) → DecidableEq (T i)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype I] [DecidableEq I] [Fintype Θ] [(i : I) → Fintype (T i)] [(i : I) → DecidableEq (T i)] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: BCE/ScoringGame.lean:84:6: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: BCE/ScoringGame.lean:95:6: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: BCE/ScoringGame.lean:116:8: This simp argument is unused:
+  ← Finset.ite_sum_zero
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [originalMass]
+
+Note: Simp arguments with `←` have the additional effect of removing the other direction from the simp set, even if the simp argument itself is unused. If the hint above does not work, try replacing `←` with `-` to only get that effect and silence this warning.
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [1036/1112] Replayed BCE.ActionReindex
+warning: BCE/ActionReindex.lean:20:0: automatically included section variable(s) unused in theorem `BayesCorrelated.OrderImplementation.profileEquiv_update`:
+  [Fintype I]
+  [(i : I) → Fintype (A i)]
+  [(i : I) → DecidableEq (A i)]
+  [(i : I) → Fintype (B i)]
+  [(i : I) → DecidableEq (B i)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype
+  I] [(i : I) →
+  Fintype (A i)] [(i : I) → DecidableEq (A i)] [(i : I) → Fintype (B i)] [(i : I) → DecidableEq (B i)] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: BCE/ActionReindex.lean:35:0: automatically included section variable(s) unused in theorem `BayesCorrelated.OrderImplementation.reindexRule_valid`:
+  [Fintype Θ]
+  [(i : I) → Fintype (T i)]
+  [(i : I) → DecidableEq (T i)]
+  [(i : I) → DecidableEq (A i)]
+  [(i : I) → DecidableEq (B i)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype
+  Θ] [(i : I) →
+  Fintype
+    (T i)] [(i : I) → DecidableEq (T i)] [(i : I) → DecidableEq (A i)] [(i : I) → DecidableEq (B i)] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: BCE/ActionReindex.lean:86:0: automatically included section variable(s) unused in theorem `BayesCorrelated.OrderImplementation.profileEquiv_symm`:
+  [Fintype I]
+  [DecidableEq I]
+  [(i : I) → Fintype (A i)]
+  [(i : I) → DecidableEq (A i)]
+  [(i : I) → Fintype (B i)]
+  [(i : I) → DecidableEq (B i)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype
+  I] [DecidableEq
+  I] [(i : I) →
+  Fintype (A i)] [(i : I) → DecidableEq (A i)] [(i : I) → Fintype (B i)] [(i : I) → DecidableEq (B i)] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: BCE/ActionReindex.lean:89:0: automatically included section variable(s) unused in theorem `BayesCorrelated.OrderImplementation.reindexUtility_back`:
+  [Fintype I]
+  [DecidableEq I]
+  [Fintype Θ]
+  [(i : I) → Fintype (A i)]
+  [(i : I) → DecidableEq (A i)]
+  [(i : I) → Fintype (B i)]
+  [(i : I) → DecidableEq (B i)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype
+  I] [DecidableEq
+  I] [Fintype
+  Θ] [(i : I) →
+  Fintype (A i)] [(i : I) → DecidableEq (A i)] [(i : I) → Fintype (B i)] [(i : I) → DecidableEq (B i)] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: BCE/ActionReindex.lean:94:0: automatically included section variable(s) unused in theorem `BayesCorrelated.OrderImplementation.reindexOutcome_back`:
+  [Fintype I]
+  [DecidableEq I]
+  [Fintype Θ]
+  [(i : I) → Fintype (A i)]
+  [(i : I) → DecidableEq (A i)]
+  [(i : I) → Fintype (B i)]
+  [(i : I) → DecidableEq (B i)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype
+  I] [DecidableEq
+  I] [Fintype
+  Θ] [(i : I) →
+  Fintype (A i)] [(i : I) → DecidableEq (A i)] [(i : I) → Fintype (B i)] [(i : I) → DecidableEq (B i)] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [1658/1667] Replayed BCE.OrderCompactness
+warning: BCE/OrderCompactness.lean:36:0: automatically included section variable(s) unused in theorem `BayesCorrelated.OrderImplementation.combination_entry_le_one`:
+  [Fintype Θ]
+  [(i : I) → DecidableEq (T i)]
+  [(i : I) → DecidableEq (E i)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype Θ] [(i : I) → DecidableEq (T i)] [(i : I) → DecidableEq (E i)] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: BCE/OrderCompactness.lean:51:41: `Set.setOf_and` has been deprecated: Use `Set.ofPred_and` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵s̵e̵t̵O̵f̵_̵a̵n̵d̵S̲e̲t̲.̲o̲f̲P̲r̲e̲d̲_̲a̲n̲d̲
+warning: BCE/OrderCompactness.lean:51:56: `Set.setOf_forall` has been deprecated: Use `Set.ofPred_forall` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵s̵e̵t̵O̵f̵_̵f̵o̵r̵a̵l̵l̵S̲e̲t̲.̲o̲f̲P̲r̲e̲d̲_̲f̲o̲r̲a̲l̲l̲
+warning: BCE/OrderCompactness.lean:48:0: automatically included section variable(s) unused in theorem `BayesCorrelated.OrderImplementation.combination_isClosed`:
+  [Fintype Θ]
+  [(i : I) → DecidableEq (T i)]
+  [(i : I) → DecidableEq (E i)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype Θ] [(i : I) → DecidableEq (T i)] [(i : I) → DecidableEq (E i)] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: BCE/OrderCompactness.lean:122:2: Try this:
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [1659/1667] Replayed BCE.ScoringExtraction
+warning: BCE/ScoringExtraction.lean:21:0: automatically included section variable(s) unused in theorem `BayesCorrelated.OrderImplementation.truthful_outcome_off`:
+  [Fintype Θ]
+  [(i : I) → DecidableEq (T i)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype Θ] [(i : I) → DecidableEq (T i)] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: BCE/ScoringExtraction.lean:45:0: automatically included section variable(s) unused in theorem `BayesCorrelated.OrderImplementation.transferred_joint_off`:
+  [(i : I) → DecidableEq (E i)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [(i : I) → DecidableEq (E i)] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+info: BCE/ScoringExtraction.lean:140:53: Try this:
+  [apply] ring_nf
+
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+warning: BCE/ScoringExtraction.lean:140:20: This simp argument is unused:
+  ite_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [h, h.2, ruleCombination]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: BCE/ScoringExtraction.lean:140:30: This simp argument is unused:
+  h.2
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [h, ite_true, ruleCombination]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [1660/1667] Replayed BCE.OrderMass
+warning: BCE/OrderMass.lean:75:34: This simp argument is unused:
+  Finset.sum_ite_eq'
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Finset.sum_ite_eq, Finset.mem_univ, ite_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [1662/1667] Replayed BCE.InformationOrder
+warning: BCE/InformationOrder.lean:22:2: Try this:
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: BCE/InformationOrder.lean:65:32: Variable name `θ` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _θ
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [1663/1667] Replayed BCE.OnePlayerOrder
+warning: BCE/OnePlayerOrder.lean:21:0: automatically included section variable(s) unused in theorem `BayesCorrelated.OrderImplementation.lift_information`:
+  [Fintype Θ]
+  [DecidableEq S]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype Θ] [DecidableEq S] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: BCE/OnePlayerOrder.lean:46:12: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: BCE/OnePlayerOrder.lean:30:0: automatically included section variable(s) unused in theorem `BayesCorrelated.OrderImplementation.onePlayer_individual_sufficiency`:
+  [Fintype Θ]
+  [DecidableEq S]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype Θ] [DecidableEq S] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Build completed successfully (1667 jobs).
+Exporting #[Quot, Quot.mk, Quot.lift, Quot.ind, BayesCorrelated.finite_characterization, BayesCorrelated.mixedBNE_induces_BCE, BayesCorrelated.expansion_normalized, BayesCorrelated.expansion_null_fiber, BayesCorrelated.strategyProduct_isProbability, BayesCorrelated.induces_iff_positive_support, BayesCorrelated.onePlayer_obedienceGain, BayesCorrelated.onePlayer_characterization, BayesCorrelated.information_order_characterization, BayesCorrelated.individuallySufficient_outcome, BayesCorrelated.moreIncentiveConstrained_outcome_any_universe, BayesCorrelated.onePlayer_individual_sufficiency, BayesCorrelated.onePlayer_information_order, propext, Quot.sound, Classical.choice, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight, String.ofList, Char.ofNat, List, eagerReduce, Nat, String, String.mk, Char, optParam, autoParam, semiOutParam, outParam, BayesCorrelated.IsProbability, BayesCorrelated.IsInformation, BayesCorrelated.IsDecisionRule, BayesCorrelated.obedienceGain, BayesCorrelated.BCE, BayesCorrelated.IsExpansion, BayesCorrelated.IsStrategy, BayesCorrelated.strategyProduct, BayesCorrelated.Induces, BayesCorrelated.bestResponseGain, BayesCorrelated.MixedBNE, BayesCorrelated.Implementable, BayesCorrelated.IsCombination, BayesCorrelated.HasIndividualChannels, BayesCorrelated.IndividuallySufficient, BayesCorrelated.FullSupportPrior, BayesCorrelated.outcome, BayesCorrelated.IsBCEOutcome, BayesCorrelated.MoreIncentiveConstrained, BayesCorrelated.IsGarbling] from Solution
 Running con-ron kernel on solution
 con-ron: 1 inductive blocks modelled in-process: Lean.Syntax (30 generated records, checked by the fold as declarations and not counted as records of the file)
 con-ron: 2 declarations hoisted ahead of the pinned Nat operations they ground: Nat.mul._f, Nat.mul
-con-ron: accepted 8399 declarations (--verified)
+con-ron: accepted 13560 declarations (--verified)
 con-ron kernel accepts the solution
 Running nanoda kernel on solution
 nanoda kernel accepts the solution

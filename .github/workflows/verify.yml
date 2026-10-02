@@ -67,6 +67,10 @@ jobs:
           lake update
           lake exe cache get Mathlib.Tactic.Ring Mathlib.Tactic.NormNum \
             Mathlib.Data.Fintype.Pi Mathlib.Data.Fintype.BigOperators \
+            Mathlib.Analysis.Convex.StdSimplex Mathlib.Topology.Order.Compact \
+            Mathlib.Logic.Equiv.Prod Mathlib.Data.Fintype.EquivFin \
+            Mathlib.Algebra.BigOperators.Field Mathlib.Tactic.FieldSimp \
+            Mathlib.Tactic.Linarith Mathlib.Tactic.FunProp \
             Mathlib.Algebra.Order.BigOperators.Ring.Finset \
             Mathlib.Algebra.BigOperators.Group.Finset.Basic Mathlib.Basic.Real.Basic
       - name: Compile and replay under Linux bubblewrap

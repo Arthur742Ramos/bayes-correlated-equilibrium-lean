@@ -9,6 +9,11 @@ import Solution
 #check @BayesCorrelated.induces_iff_positive_support
 #check @BayesCorrelated.onePlayer_obedienceGain
 #check @BayesCorrelated.onePlayer_characterization
+#check @BayesCorrelated.information_order_characterization
+#check @BayesCorrelated.individuallySufficient_outcome
+#check @BayesCorrelated.moreIncentiveConstrained_outcome_any_universe
+#check @BayesCorrelated.onePlayer_individual_sufficiency
+#check @BayesCorrelated.onePlayer_information_order
 #check @BayesCorrelated.IsProbability
 #check @BayesCorrelated.IsInformation
 #check @BayesCorrelated.IsDecisionRule
@@ -21,3 +26,11 @@ import Solution
 #check @BayesCorrelated.bestResponseGain
 #check @BayesCorrelated.MixedBNE
 #check @BayesCorrelated.Implementable
+#check @BayesCorrelated.IsCombination
+#check @BayesCorrelated.HasIndividualChannels
+#check @BayesCorrelated.IndividuallySufficient
+#check @BayesCorrelated.FullSupportPrior
+#check @BayesCorrelated.outcome
+#check @BayesCorrelated.IsBCEOutcome
+#check @BayesCorrelated.MoreIncentiveConstrained
+#check @BayesCorrelated.IsGarbling
