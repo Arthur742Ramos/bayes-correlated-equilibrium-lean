@@ -1,4 +1,4 @@
-⚠ [981/1008] Replayed BCE.Implementation
+⚠ [992/1008] Replayed BCE.Implementation
 warning: BCE/Implementation.lean:123:0: automatically included section variable(s) unused in theorem `BayesCorrelated.Implementation.recommendation_induces`:
   [(i : I) → Fintype (T i)]
   [(i : I) → DecidableEq (T i)]
@@ -6,7 +6,7 @@ consider restructuring your `variable` declarations so that the variables are no
   omit [(i : I) → Fintype (T i)] [(i : I) → DecidableEq (T i)] in theorem ...
 
 Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
-⚠ [988/1008] Replayed BCE.Support
+⚠ [993/1008] Replayed BCE.Support
 warning: BCE/Support.lean:16:0: automatically included section variable(s) unused in theorem `BayesCorrelated.Implementation.expansion_normalized`:
   [Fintype Θ]
   [(i : I) → DecidableEq (T i)]

@@ -11,7 +11,7 @@
     "ContractAudit.lean": "c613486a73f40cf20ca3a517e044494ea7b95f8cf1f206cf11f4978ecefe8b77",
     "Solution.lean": "28380c35a19eea04e6ace46b99b2b0d3b4c3b1954cff0c384c5024c682cb2aa8",
     "comparator.json": "f0c8488bdad668852b7130531ea21ab90dfd8eeaf5da291a44a5c169643f3ac5",
-    "lake-manifest.json": "6dab6dbef446a74dae4b359ab7e27dd521c203037ba17a9099a9a34c8c942422",
+    "lake-manifest.json": "53744843da49e0cee14dae12905c816c4de42ef557aad219408d73a270df23b9",
     "lakefile.toml": "e15e7e9521d5d9ede3ca600a645e9cbd13ab1fc11d156d86649b67136d4d868f",
     "lean-toolchain": "8dc8d6f560141069d9073e370611716ef77ada0da8ffa37e2149f44b2e63ac7a"
   },
